@@ -16,7 +16,8 @@ __pycache__/
 
 # Additional tools
 *.bin/
-Classification
+dataset/training
+dataset/test
 
 # C extensions
 *.so
@@ -108,3 +109,6 @@ ENV/
 
 # MacOS files
 *.DS_Store
+
+#Excel
+*.xlsx
