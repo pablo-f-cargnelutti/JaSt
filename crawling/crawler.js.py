@@ -33,7 +33,9 @@ if __name__ == '__main__':
             r = session.get(url, verify=False)
             r.html.render(retries=4, sleep=1, wait=1)
             scripts = r.html.find('script')
+            r.close()
         except:
+            session.close()
             continue
         i = 1
         for script in scripts:
@@ -44,3 +46,5 @@ if __name__ == '__main__':
                 file.flush()
                 file.close()
                 i += 1
+
+        session.close()
