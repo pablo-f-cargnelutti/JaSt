@@ -42,7 +42,7 @@ def is_js_file(given_file, syntactical_units=False, tolerance='false'):
 
     with open(os.path.join(SRC_PATH, 'is_js.log'), 'w') as my_log:
         try:
-            result = subprocess.check_output('nodejs '
+            result = subprocess.check_output('node '
                                              + os.path.join(SRC_PATH, 'features',
                                                             'parsing', 'parser.js')
                                              + ' ' + given_file
